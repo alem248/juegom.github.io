@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #eedbf4;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+/* MODALES */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.modal.activo {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 420px;
+  text-align: center;
+  border: 5px solid #ffb6c1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #ff8da1;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* MODAL PREGUNTA  */
+#modal-pregunta {
+  align-items: flex-start;
+  padding-top: 30px;
+}
+
+#opciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.opcion-btn {
+  background: #ffb6c1;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.opcion-btn:hover {
+  background: #ff8da1;
+  transform: scale(1.05);
+}
+
+/*  BOTONES SVG */
+.boton-base {
+  transform-origin: bottom; 
+  transition: transform 0.1s ease;
+}
+
+/* Mientras el jugador está encima */
+.boton.presionando .boton-base {
+  transform: scaleY(0.6);
+}
+
+
+.boton.activado .boton-base {
+  transform: none;
+  pointer-events: none;
+}
+
+
+
+/*  PUERTAS */
+
+.puerta {
+  fill: #6d597a;
+  transition: transform 0.8s ease-in-out, opacity 0.5s;
+}
+
+/* PERSONAJE  */
+#player {
+  transition: transform 0.05s linear;
+}
+
+#pelo-rulos {
+  transition: transform 0.08s ease-out;
+}
+
+/* animacion de espada */
+
+.btn-flotante {
+  cursor: pointer;
+  animation: flotar 2s infinite ease-in-out;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+#espada-final {
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+}
+
+.espada-girando {
+  animation: girarEspada 3s infinite linear;
+}
+
+
+@keyframes girarEspada {
+  from { 
+    transform: translate(150px, 200px) rotate(0deg) scale(0.8); 
+  }
+  to { 
+    transform: translate(150px, 200px) rotate(360deg) scale(0.8); 
+  }
+}

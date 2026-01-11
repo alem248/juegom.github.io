@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitty Game</title>
+  <link rel="stylesheet" href="gif.css" />
+</head>
+<body>
+
+<!-- SVG JUEGO  -->
+<svg id="game" viewBox="0 0 2400 600" preserveAspectRatio="xMidYMin slice">
+
+  <!-- Piso -->
+  <rect x="-600" y="350" width="10000" height="300" fill="#8C6587" />
+
+
+  <!-- NIVELES -->
+
+<!-- NIVEL 1 -->
+<g id="nivel-1" data-tema="computacion" transform="translate(0,0)">
+
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- NIVEL 2 -->
+<g id="nivel-2" data-tema="ingles" transform="translate(700,0)">
+  
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- NIVEL 3 -->
+<g id="nivel-3" data-tema="religion" transform="translate(1400,0)">
+  
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- NIVEL 4 -->
+<g id="nivel-4" data-tema="historia-universal" transform="translate(2100,0)">
+  
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- NIVEL 5 -->
+<g id="nivel-5" data-tema="civica" transform="translate(2800,0)">
+  
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- NIVEL 6 -->
+<g id="nivel-6" data-tema="historia-peru" transform="translate(3500,0)">
+  
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- NIVEL 7 -->
+<g id="nivel-7" data-tema="quimica" transform="translate(4200,0)">
+  
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- NIVEL 8 -->
+<g id="nivel-8" data-tema="fisica" transform="translate(4900,0)">
+  
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- NIVEL 9 -->
+<g id="nivel-9" data-tema="matematicas" transform="translate(5600,0)">
+  
+<g class="boton" transform="translate(200,330)">
+  <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+</g>
+
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g>
+
+<!-- nivel 10 -->
+
+<g id="nivel-10" data-tema="razonamiento" transform="translate(6300,0)">
+  <g class="boton" transform="translate(200,330)">
+    <rect class="boton-base" x="0" y="0" width="80" height="20" rx="10" fill="#ff8da1" />
+  </g>
+  <rect class="puerta" x="450" y="170" width="140" height="180" rx="12" fill="#6d597a" />
+</g> <g id="final-zone" transform="translate(7000, 0)">
+  <g id="btn-recompensa" class="btn-flotante" onclick="abrirCofre()">
+    <rect x="0" y="100" width="300" height="50" rx="25" fill="#ffd700" stroke="#b8860b" stroke-width="3" />
+    <text x="150" y="132" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#5d4037">haz click aqui :D</text>
+  </g>
+
+  <!-- final -->
+  <g id="cofre" transform="translate(100, 270)">
+    <rect x="0" y="30" width="100" height="50" fill="#5d4037" /> 
+    <path id="cofre-tapa" d="M 0 30 Q 50 -10 100 30 Z" fill="#8d6e63" stroke="#3e2723" /> 
+    <rect x="40" y="25" width="20" height="15" fill="#ffd700" /> 
+  </g>
+
+  <g id="espada-final" style="display:none; cursor:pointer;" onclick="mostrarMensajeFinal()">
+    <rect x="-5" y="40" width="10" height="30" fill="#ffd700" rx="2" /> 
+    <rect x="-20" y="35" width="40" height="8" fill="#ffd700" rx="2" /> 
+    <circle cx="0" cy="75" r="7" fill="#ffd700" /> 
+    <path d="M -12 35 L -12 -60 Q -12 -80 0 -80 Q 12 -80 12 -60 L 12 35 Z" fill="url(#brillo-espada)" stroke="#999" />
+    
+    <defs>
+      <linearGradient id="brillo-espada" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:#e0e0e0" />
+        <stop offset="50%" style="stop-color:#ffffff" />
+        <stop offset="100%" style="stop-color:#e0e0e0" />
+      </linearGradient>
+    </defs>
+  </g>
+</g>
+
+  <!-- jugador -->
+  <g id="player" transform="translate(100,300)">
+    <g id="cuerpo-animado">
+
+      <circle cx="0" cy="0" r="50" fill="white" />
+
+      <!-- Pelo -->
+      <g id="pelo-rulos">
+        <circle cx="-35" cy="-35" r="15" fill="black" />
+        <circle cx="-18" cy="-45" r="15" fill="black" />
+        <circle cx="0" cy="-50" r="15" fill="black" />
+        <circle cx="18" cy="-45" r="15" fill="black" />
+        <circle cx="35" cy="-35" r="15" fill="black" />
+      </g>
+
+      <!-- Orejas -->
+      <g>
+        <path d="M -40 -30 L -50 -60 L -20 -45 Z" fill="white" />
+        <path d="M 40 -30 L 50 -60 L 20 -45 Z" fill="white" />
+        <path d="M -38 -32 L -45 -52 L -25 -42 Z" fill="#ffb6c1" />
+        <path d="M 38 -32 L 45 -52 L 25 -42 Z" fill="#ffb6c1" />
+      </g>
+
+      <!-- Mejillas -->
+      <circle cx="-35" cy="15" r="7" fill="#ffb6c1" opacity="0.6" />
+      <circle cx="35" cy="15" r="7" fill="#ffb6c1" opacity="0.6" />
+
+      <!-- Ojos -->
+      <circle cx="-20" cy="5" r="8" fill="black" />
+      <circle cx="20" cy="5" r="8" fill="black" />
+      <circle cx="-17" cy="2" r="3" fill="white" />
+      <circle cx="23" cy="2" r="3" fill="white" />
+
+      <!-- Lentes -->
+      <circle cx="-20" cy="5" r="15" fill="none" stroke="black" stroke-width="1.5" />
+      <circle cx="20" cy="5" r="15" fill="none" stroke="black" stroke-width="1.5" />
+      <line x1="-5" y1="5" x2="5" y2="5" stroke="black" stroke-width="1.5" />
+
+      <!-- Boca -->
+      <path d="M -4 19 Q 0 28 4 19 Z" fill="#ff8da1" />
+      <path d="M -7 18 Q -3.5 23 0 18" fill="none" stroke="black" stroke-width="1.5" />
+      <path d="M 0 18 Q 3.5 23 7 18" fill="none" stroke="black" stroke-width="1.5" />
+
+    </g>
+  </g>
+
+</svg>
+
+<!--REGLAS  -->
+<div id="modal-reglas" class="modal activo">
+  <div class="modal-content">
+    <h2>📘 Reglas del Juego</h2>
+    <p>
+      - Salta sobre los botones para responder preguntas.<br>
+      - Cada puerta corresponde a un tema.<br>
+      - Si fallas, esperas 30 segundos.<br>
+      - Solo avanzas si aciertas.<br>
+      - La dificultad aumenta en cada puerta.
+    </p>
+    <button onclick="iniciarJuego()">Comenzar</button>
+  </div>
+</div>
+
+<!-- PREGUNTA  -->
+<div id="modal-pregunta" class="modal">
+  <div class="modal-content">
+    <h2 id="texto-pregunta">Pregunta</h2>
+
+    <div id="opciones-container"></div>
+
+    <p id="mensaje-error" style="display:none; color:#e63946; font-weight:bold;">
+      Respuesta incorrecta, espere 30 segundos
+    </p>
+
+    <p id="temporizador" style="display:none; font-size:18px; font-weight:bold;">
+      30
+    </p>
+  </div>
+</div>
+
+<!-- final -->
+<div id="modal-final" class="modal">
+  <div class="modal-content">
+    <h2>¡FELICIDADES!</h2>
+    <p id="texto-final">Gracias por pasarte cada una de las preguntas, el hecho que hayas logrado cada una de ellas demuestra el potencialque tienes y la gran capacidad mental que has formado con el paso del tiempo. <br> Este juego lo hice no solamente para probar mis habilidades, si no para realizar una dedicatoria hacia tu persona y el maravilloso apoyo que has sido para mi con el paso de los años, en como al conocerte literalmnete se me abrieron nuevas puertas, tanto en el ambito emocional como academico, gracias a ti conoci lo de las becas, reforce temas de la carrera pq tu lo conoces, conoci mejor lo de TECSUP y ahora estudio ahi, estoy muy agradecida contigo gatiko, gracias realmente con todo el apoyo que me brindas. <br> te amo.</p>
+    <div id="container-gif"></div> <button onclick="location.reload()">Jugar de nuevo</button>
+  </div>
+</div>
+<script src="gif.js"></script>
+</body>
+</html>
